@@ -1,0 +1,98 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.intro, .content {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+    padding: 10px;
+    line-height: 1.6;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.caption {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: small;
+}
+
+.cta-text {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+}
+
+.game-table {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.game-table th, .game-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.game-table th {
+    background-color: #f0f0f0;
+}
+
+.form {
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin-top: 20px;
+}
+
+.form label {
+    margin-right: 10px;
+}
+
+.form input {
+    padding: 5px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.submit-button {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #f0f0f0;
+}
