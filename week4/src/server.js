@@ -2,28 +2,28 @@ import express from 'express';
 const app = express();
 const PORT = 5000;
 
-// Middleware to parse JSON requests
+// Middleware to handle JSON requests
 app.use(express.json());
 
-// Basic route for testing
+// A simple route to check if the server is running
 app.get('/', (req, res) => {
   res.send('Express server is running!');
 });
 
-// New route for /welcome
+// A welcome route to greet users
 app.get('/welcome', (req, res) => {
   res.json({ message: "Welcome to Express!" });
 });
 
-// In-memory array to store users
+// In-memory storage for user data
 let users = [];
 
-// GET /users - Retrieve all users
+// Fetch all users
 app.get('/users', (req, res) => {
   res.json(users);
 });
 
-// POST /users - Add a new user (with duplicate ID check)
+// Add a new user, ensuring no duplicate IDs
 app.post('/users', (req, res) => {
   const { id, name, email } = req.body;
   if (!id || !name || !email) {
@@ -36,7 +36,7 @@ app.post('/users', (req, res) => {
   res.status(201).json({ message: "User added successfully." });
 });
 
-// PUT /users/:id - Update a user by ID (ensure id is treated as string)
+// Update user details by ID
 app.put('/users/:id', (req, res) => {
   const id = req.params.id.toString();
   const { name, email } = req.body;
@@ -49,7 +49,7 @@ app.put('/users/:id', (req, res) => {
   res.json({ message: "User updated successfully." });
 });
 
-// DELETE /users/:id - Delete a user by ID (ensure id is treated as string)
+// Delete a user by ID
 app.delete('/users/:id', (req, res) => {
   const id = req.params.id.toString();
   const userIndex = users.findIndex(user => user.id === id);
@@ -60,13 +60,13 @@ app.delete('/users/:id', (req, res) => {
   res.json({ message: "User deleted successfully." });
 });
 
-// Error handling middleware
+// Middleware to handle unexpected errors
 app.use((err, req, res) => {
   console.error(err.stack);
   res.status(500).json({ error: "Something went wrong!" });
 });
 
-// Start the server
+// Start the server and listen on the specified port
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
