@@ -1,2 +1,7 @@
-<h1>Mern Externship Assignments</h1>
-<h2>By Abhay Prasad - 21MIM10022</h2>
+# MERN Externship Assignments
+
+**Author:** Abhay Prasad (21MIM10022)
+
+---
+
+This repository contains assignments and projects from the MERN Stack Externship program.
