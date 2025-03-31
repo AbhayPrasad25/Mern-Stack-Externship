@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
@@ -39,4 +39,41 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Modal Animation */
+.modal-enter {
+  opacity: 0;
+}
+.modal-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.modal-exit {
+  opacity: 1;
+}
+.modal-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+/* Fix button hover styles */
+.custom-btn:hover {
+  background-color: inherit;
+}
+button.bg-yellow-400:hover {
+  background-color: #fbbf24 !important; /* yellow-500 */
+}
+button.bg-gray-800:hover {
+  background-color: #1f2937 !important; /* gray-700 */
+}
+
+/* Ensure button text is always visible */
+.product-btn {
+  background-color: #fbbf24 !important; /* yellow-400 */
+  color: #1f2937 !important; /* gray-800 */
+}
+
+.product-btn:hover {
+  background-color: #f59e0b !important; /* yellow-500 */
 }
